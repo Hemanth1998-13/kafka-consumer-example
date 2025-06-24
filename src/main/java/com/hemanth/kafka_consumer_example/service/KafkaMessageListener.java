@@ -13,8 +13,28 @@ public class KafkaMessageListener {
     Logger log = LoggerFactory.getLogger(KafkaMessageListener.class);
 
     @KafkaListener(topics = "topic-by-spring",groupId = "group-1")
-    public void consume(String message){
+    public void consume1(String message){
 
-        log.info("Consumed the message: "+ message);
+        log.info("Consumer-1 Consumed the message: "+ message);
     }
+
+    @KafkaListener(topics = "topic-by-spring",groupId = "group-1")
+    public void consume2(String message){
+
+        log.info("Consumer-2 Consumed the message: "+ message);
+    }
+
+    @KafkaListener(topics = "topic-by-spring",groupId = "group-1")
+    public void consume3(String message){
+
+        log.info("Consumer-3 Consumed the message: "+ message);
+    }
+
+    @KafkaListener(topics = "topic-by-spring",groupId = "group-1")
+    public void consume4(String message){
+
+        log.info("Consumer-4 Consumed the message: "+ message);
+    }
+
+
 }
